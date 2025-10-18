@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #0c0a1f;
+  background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  animation: stars-move 60s linear infinite;
+}
+
+@keyframes stars-move {
+  from {
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  }
+  to {
+    background-position: 550px 550px, 390px 410px, 380px 520px, 220px 250px;
+  }
+}
+
+.alien-glow {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
+
+@keyframes planet-pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.planet {
+  animation: planet-pop-in 0.5s ease-out forwards;
+}
+
+.highlight-1 {
+  box-shadow: 0 0 0 4px #3b82f6, 0 0 20px #3b82f6;
+}
+.highlight-2 {
+  box-shadow: 0 0 0 4px #10b981, 0 0 20px #10b981;
+}
+.highlight-lcm {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 5px gold, 0 0 30px gold, 0 0 10px white inset;
+  animation: lcm-pulse 1s infinite alternate;
+}
+@keyframes lcm-pulse {
+  from {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 5px gold, 0 0 30px gold, 0 0 10px white inset;
+  }
+  to {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 5px gold, 0 0 40px #ffeb3b, 0 0 15px white inset;
+  }
+}

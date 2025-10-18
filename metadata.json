@@ -1,0 +1,6 @@
+{
+  "name": "LCM Space Mission",
+  "description": "An interactive game to explain the concept of Least Common Multiple (LCM).\nHelp aliens find their common landing planet!",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
